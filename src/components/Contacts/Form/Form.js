@@ -20,7 +20,7 @@ function Form({ contacts, addContact }) {
             return false
         }
         
-        addContact([...contacts, form])
+        addContact((prev) => [...prev, form])
     }
 
   return (

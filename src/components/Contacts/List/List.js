@@ -14,6 +14,9 @@ function List({ contacts }) {
     })
   })
 
+  const handleDelete = filtered.filter((item) => {
+    return item.fullname !== item
+  })
 
 
   return (
@@ -29,13 +32,18 @@ function List({ contacts }) {
               {
                 filtered.map((contact, i) => (
                   <div key={i} className="items">
-                    <li  className="fullname">{contact.fullname}</li>
-                    <li className="phone-number" >{contact.phone_number}</li>
+                    <div className="telephone-items">
+                      <li  className="fullname">{contact.fullname}</li>
+                      <li className="phone-number" >{contact.phone_number}</li>
+                    </div>
+                    <button onClick={() => handleDelete(filtered.fullname)}>Delete</button>
                   </div>
+                   
                 ))
               }
             </ul>
         </div>
+        <p>Total Contacts {filtered.length}</p>
       </div>
   );
 }
