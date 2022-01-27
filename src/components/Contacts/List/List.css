@@ -20,22 +20,13 @@
 .list-container {
     padding: 15px;
     border-radius: 8px;
+    background-color: rgb(255, 255, 255);
     margin-top: 20px;
     width: 100%;
-    background: #2980b9;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #2c3e50, #2980b9);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #2c3e50, #2980b9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
 .list-container ul {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
     font-size: 20px;
 }
 
@@ -48,6 +39,9 @@ background: linear-gradient(to right, #2c3e50, #2980b9); /* W3C, IE 10+/ Edge, F
 
 .list-container ul .items button {
     border-radius: 8px;
+    font-size: 16px;
+    background-color: rgb(211, 84, 84);
+    color: #ffff;
     width: 100px;
     height: 30px;
     cursor: pointer;
@@ -62,7 +56,7 @@ ul .items .telephone-items {
     justify-content: center;
     flex-direction: column;
     padding: 0 20px;
-    background-color: #2980b9;
+    background-color: #c4c2d4;
 }
 .list-container ul .items .fullname {
     
@@ -70,6 +64,7 @@ ul .items .telephone-items {
 
 .list-container ul .items .phone-number {
     font-size: 18px;
+    font-style: italic;
     color: #ffff;
 }
 

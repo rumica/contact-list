@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './List.css'
 
-function List({ contacts }) {
+function List({ contacts, setContacts }) {
 
   const [filteredText, setFilteredText] = useState([])
 
@@ -14,9 +14,10 @@ function List({ contacts }) {
     })
   })
 
-  const handleDelete = filtered.filter((item) => {
-    return item.fullname !== item
-  })
+  const handleDelete = (id) => {
+    const newList = filtered.filter((item) => item.phone_number !== id);
+    setContacts(newList)
+  }
 
 
   return (
@@ -31,14 +32,13 @@ function List({ contacts }) {
             <ul>
               {
                 filtered.map((contact, i) => (
-                  <div key={i} className="items">
+                 <div key={i} className="items">
                     <div className="telephone-items">
                       <li  className="fullname">{contact.fullname}</li>
                       <li className="phone-number" >{contact.phone_number}</li>
                     </div>
-                    <button onClick={() => handleDelete(filtered.fullname)}>Delete</button>
-                  </div>
-                   
+                    <button onClick={() => handleDelete(contact.phone_number)}>Delete</button>
+                  </div>             
                 ))
               }
             </ul>
